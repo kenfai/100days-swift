@@ -11,15 +11,12 @@ import SwiftUI
 struct Question: View {
     var value: Int
     var multiply: Int
-    var question = ""
-    var answer = 0
 
-    init(value: Int, multiply: Int) {
-        self.value = value
-        self.multiply = multiply
-        
-        self.question = "\(value) x \(multiply) = ?"
-        self.answer = value * multiply
+    var question: String {
+        "\(value) x \(multiply) = ?"
+    }
+    var answer: Int {
+        value * multiply
     }
     
     var body: some View {
