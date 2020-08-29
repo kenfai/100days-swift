@@ -14,6 +14,7 @@ struct AddView: View {
     @State private var name = ""
     @State private var type = "Personal"
     @State private var amount = ""
+    @State private var showingValidation = false
     static let types = ["Business", "Personal"]
     
     var body: some View {
@@ -27,7 +28,7 @@ struct AddView: View {
                     }
                 }
                 TextField("Amount", text: $amount)
-                    .keyboardType(.numberPad)
+                    //.keyboardType(.numberPad)
             }
             .navigationBarTitle("Add new expense")
             .navigationBarItems(trailing:
@@ -36,8 +37,16 @@ struct AddView: View {
                         let item = ExpenseItem(name: self.name, type: self.type, amount: actualAmount)
                         self.expenses.items.append(item)
                         self.presentationMode.wrappedValue.dismiss()
+                    } else {
+                        self.showingValidation = true
                     }
-            })
+                }
+                .alert(isPresented: $showingValidation) {
+                    Alert(title: Text("Invalid Amount"), message: Text("The value entered is not a valid integer!"), dismissButton: .default(Text("OK")) {
+                        self.amount = ""
+                    })
+                }
+            )
         }
     }
 }

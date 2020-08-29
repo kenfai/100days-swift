@@ -38,6 +38,24 @@ class Expenses: ObservableObject {
     }
 }
 
+struct AmountView: ViewModifier {
+    var amount: Int
+    var color: Color {
+        switch amount {
+        case 0...10:
+            return Color.green
+        case 100...:
+            return Color.red
+        default:
+            return Color.blue
+        }
+    }
+    
+    func body(content: Content) -> some View {
+        content.foregroundColor(color)
+    }
+}
+
 struct ContentView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var expenses = Expenses()
@@ -55,20 +73,18 @@ struct ContentView: View {
                         }
                         
                         Spacer()
-                        Text("\(item.amount)")
+                        Text("\(item.amount)").modifier(AmountView(amount: item.amount))
                     }
                     
                 }
                 .onDelete(perform: removeItems)
             }
             .navigationBarTitle("iExpense")
-            .navigationBarItems(trailing:
+            .navigationBarItems(leading: EditButton(), trailing:
                 Button(action: {
                     //let expense = ExpenseItem(name: "Test", type: "Personal", amount: 5)
                     //self.expenses.items.append(expense)
-                    print(self.showingAddExpense)
                     self.showingAddExpense = true
-                    print(self.showingAddExpense)
                 }) {
                     Image(systemName: "plus")
                 }
