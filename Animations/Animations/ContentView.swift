@@ -33,7 +33,7 @@ struct ContentView: View {
     @State private var isShowingRed = false
     
     var body: some View {
-        VStack {
+        /*VStack {
             Button("Tap Me") {
                 withAnimation {
                     self.isShowingRed.toggle()
@@ -48,7 +48,7 @@ struct ContentView: View {
                     //.transition(.asymmetric(insertion: .scale, removal: .opacity))
                     .transition(.pivot)
             }
-        }
+        }*/
         
         /*HStack(spacing: 0) {
             ForEach(0..<letters.count) { num in
@@ -69,7 +69,7 @@ struct ContentView: View {
                 }
         )*/
         
-        /*LinearGradient(gradient: Gradient(colors: [.yellow, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
+        LinearGradient(gradient: Gradient(colors: [.yellow, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
             .frame(width: 300, height: 200)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .offset(dragAmount)
@@ -82,8 +82,8 @@ struct ContentView: View {
                             
                         }
                 }
-            )*/
-            //.animation(.spring())
+            )
+            .animation(.spring())
         
         /*
          Button("Tap Me") {
