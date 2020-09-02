@@ -26,10 +26,11 @@ struct NewActivityView: View {
             .navigationBarItems(leading: Button("Cancel") {
                 self.presentationMode.wrappedValue.dismiss()
             }, trailing: Button(action: {
-                    self.activities.items.append(Activity(title: self.title, description: self.description))
-                    self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("Add")
+                self.activities.items.append(Activity(title: self.title, description: self.description))
+            
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Add")
             })
         }
     }
