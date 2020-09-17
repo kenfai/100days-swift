@@ -13,7 +13,11 @@
 		5243A9402510FB8700D72B40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5243A93F2510FB8700D72B40 /* Assets.xcassets */; };
 		5243A9432510FB8700D72B40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5243A9422510FB8700D72B40 /* Preview Assets.xcassets */; };
 		5243A9462510FB8700D72B40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5243A9442510FB8700D72B40 /* LaunchScreen.storyboard */; };
-		5243A94E251110EB00D72B40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243A94D251110EB00D72B40 /* ContentView.swift */; };
+		5243A94E251110EB00D72B40 /* DisableFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243A94D251110EB00D72B40 /* DisableFormView.swift */; };
+		52BAFAAB251379110040820B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAFAAA251379110040820B /* Order.swift */; };
+		52BAFAAD251379E80040820B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAFAAC251379E80040820B /* ContentView.swift */; };
+		52BAFAAF25137E170040820B /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAFAAE25137E170040820B /* AddressView.swift */; };
+		52BAFAB12513871C0040820B /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAFAB02513871C0040820B /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +29,11 @@
 		5243A9422510FB8700D72B40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5243A9452510FB8700D72B40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5243A9472510FB8700D72B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5243A94D251110EB00D72B40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5243A94D251110EB00D72B40 /* DisableFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableFormView.swift; sourceTree = "<group>"; };
+		52BAFAAA251379110040820B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		52BAFAAC251379E80040820B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52BAFAAE25137E170040820B /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		52BAFAB02513871C0040820B /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +69,11 @@
 				5243A9392510FB8600D72B40 /* AppDelegate.swift */,
 				5243A93B2510FB8600D72B40 /* SceneDelegate.swift */,
 				5243A93D2510FB8600D72B40 /* AlbumView.swift */,
-				5243A94D251110EB00D72B40 /* ContentView.swift */,
+				5243A94D251110EB00D72B40 /* DisableFormView.swift */,
+				52BAFAAC251379E80040820B /* ContentView.swift */,
+				52BAFAB02513871C0040820B /* CheckoutView.swift */,
+				52BAFAAE25137E170040820B /* AddressView.swift */,
+				52BAFAAA251379110040820B /* Order.swift */,
 				5243A93F2510FB8700D72B40 /* Assets.xcassets */,
 				5243A9442510FB8700D72B40 /* LaunchScreen.storyboard */,
 				5243A9472510FB8700D72B40 /* Info.plist */,
@@ -149,9 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BAFAAF25137E170040820B /* AddressView.swift in Sources */,
 				5243A93A2510FB8600D72B40 /* AppDelegate.swift in Sources */,
 				5243A93C2510FB8600D72B40 /* SceneDelegate.swift in Sources */,
-				5243A94E251110EB00D72B40 /* ContentView.swift in Sources */,
+				52BAFAAD251379E80040820B /* ContentView.swift in Sources */,
+				52BAFAAB251379110040820B /* Order.swift in Sources */,
+				5243A94E251110EB00D72B40 /* DisableFormView.swift in Sources */,
+				52BAFAB12513871C0040820B /* CheckoutView.swift in Sources */,
 				5243A93E2510FB8600D72B40 /* AlbumView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

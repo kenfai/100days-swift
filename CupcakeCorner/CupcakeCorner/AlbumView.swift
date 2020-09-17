@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AlbumView.swift
 //  CupcakeCorner
 //
 //  Created by Ginger on 15/09/2020.
