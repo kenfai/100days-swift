@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5248D1A32518D45700ADCDCA /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248D1A22518D45700ADCDCA /* RatingView.swift */; };
+		5248D1A82518D8D600ADCDCA /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248D1A72518D8D600ADCDCA /* EmojiRatingView.swift */; };
+		5248D1AD2518DD8D00ADCDCA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248D1AC2518DD8D00ADCDCA /* DetailView.swift */; };
+		529A245025178AD3009D6D2C /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529A244F25178AD3009D6D2C /* AddBookView.swift */; };
+		529A24582517B387009D6D2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529A24572517B387009D6D2C /* ContentView.swift */; };
 		52B33F61251641EF00FFE8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B33F60251641EF00FFE8E5 /* AppDelegate.swift */; };
 		52B33F63251641EF00FFE8E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B33F62251641EF00FFE8E5 /* SceneDelegate.swift */; };
 		52B33F65251641EF00FFE8E5 /* PushButtonBindngView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B33F64251641EF00FFE8E5 /* PushButtonBindngView.swift */; };
@@ -17,7 +22,7 @@
 		52B33F7B251641F000FFE8E5 /* BookwormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B33F7A251641F000FFE8E5 /* BookwormTests.swift */; };
 		52B33F86251641F000FFE8E5 /* BookwormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B33F85251641F000FFE8E5 /* BookwormUITests.swift */; };
 		52B33F9A251649ED00FFE8E5 /* EnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B33F99251649ED00FFE8E5 /* EnvironmentView.swift */; };
-		52B33FA52516500000FFE8E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B33FA42516500000FFE8E5 /* ContentView.swift */; };
+		52B33FA52516500000FFE8E5 /* StudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B33FA42516500000FFE8E5 /* StudentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5248D1A22518D45700ADCDCA /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		5248D1A72518D8D600ADCDCA /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		5248D1AC2518DD8D00ADCDCA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		529A244F25178AD3009D6D2C /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		529A24572517B387009D6D2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52B33F5D251641EF00FFE8E5 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B33F60251641EF00FFE8E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B33F62251641EF00FFE8E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +64,7 @@
 		52B33F85251641F000FFE8E5 /* BookwormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormUITests.swift; sourceTree = "<group>"; };
 		52B33F87251641F000FFE8E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B33F99251649ED00FFE8E5 /* EnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentView.swift; sourceTree = "<group>"; };
-		52B33FA42516500000FFE8E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52B33FA42516500000FFE8E5 /* StudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +119,12 @@
 				52B33F62251641EF00FFE8E5 /* SceneDelegate.swift */,
 				52B33F64251641EF00FFE8E5 /* PushButtonBindngView.swift */,
 				52B33F99251649ED00FFE8E5 /* EnvironmentView.swift */,
-				52B33FA42516500000FFE8E5 /* ContentView.swift */,
+				52B33FA42516500000FFE8E5 /* StudentView.swift */,
+				5248D1AC2518DD8D00ADCDCA /* DetailView.swift */,
+				529A244F25178AD3009D6D2C /* AddBookView.swift */,
+				5248D1A22518D45700ADCDCA /* RatingView.swift */,
+				529A24572517B387009D6D2C /* ContentView.swift */,
+				5248D1A72518D8D600ADCDCA /* EmojiRatingView.swift */,
 				52B33F69251641EF00FFE8E5 /* Assets.xcassets */,
 				52B33F6E251641EF00FFE8E5 /* LaunchScreen.storyboard */,
 				52B33F71251641F000FFE8E5 /* Info.plist */,
@@ -275,9 +290,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5248D1A82518D8D600ADCDCA /* EmojiRatingView.swift in Sources */,
+				529A245025178AD3009D6D2C /* AddBookView.swift in Sources */,
 				52B33F61251641EF00FFE8E5 /* AppDelegate.swift in Sources */,
+				529A24582517B387009D6D2C /* ContentView.swift in Sources */,
+				5248D1A32518D45700ADCDCA /* RatingView.swift in Sources */,
+				5248D1AD2518DD8D00ADCDCA /* DetailView.swift in Sources */,
 				52B33F68251641EF00FFE8E5 /* Bookworm.xcdatamodeld in Sources */,
-				52B33FA52516500000FFE8E5 /* ContentView.swift in Sources */,
+				52B33FA52516500000FFE8E5 /* StudentView.swift in Sources */,
 				52B33F63251641EF00FFE8E5 /* SceneDelegate.swift in Sources */,
 				52B33F9A251649ED00FFE8E5 /* EnvironmentView.swift in Sources */,
 				52B33F65251641EF00FFE8E5 /* PushButtonBindngView.swift in Sources */,
