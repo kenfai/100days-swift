@@ -12,28 +12,34 @@ struct UserView: View {
     
     @State private var friends = [User]()
     
+    var registeredOn: Date {
+        let formatter = ISO8601DateFormatter()
+        let datetime = formatter.date(from: self.user.wrappedRegistered)
+        return datetime!
+    }
+    
     var body: some View {
         VStack {
             Section {
-                Text("\(user.name)")
+                Text("\(user.wrappedName)")
                     .font(.largeTitle)
                 
                 Text("(\(user.age))")
                     .font(.title2)
                 
-                Text("\(user.company)")
+                Text("\(user.wrappedCompany)")
                     .font(.title)
                     .foregroundColor(.gray)
                 
                 VStack(alignment: .leading) {
                     HStack {
                         Image(systemName: "envelope")
-                        Text("\(user.email)")
+                        Text("\(user.wrappedEmail)")
                     }
                     
                     HStack {
                         Image(systemName: "signpost.left")
-                        Text("\(user.address)")
+                        Text("\(user.wrappedAddress)")
                     }
                 }
                 .padding()
@@ -42,22 +48,22 @@ struct UserView: View {
                     Text("About Me")
                         .font(.title)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    Text("\(user.about)")
+                    Text("\(user.wrappedAbout)")
                 }
                 .padding()
                 
-                Text("Registered on: \(user.registered)")
+                Text("Registered on: \(self.registeredOn)")
                     .foregroundColor(.gray)
             }
             
             Section {
                 Text("Friends")
                     .fontWeight(.bold)
-                List(friends, id: \.id) { user in
+                /*List(friends, id: \.id) { user in
                     NavigationLink(destination: UserView(user: user)) {
                         Text("\(user.name)")
                     }
-                }
+                }*/
             }
             
             Spacer()
@@ -82,12 +88,12 @@ struct UserView: View {
                 if let decodedResponse = try? JSONDecoder().decode([User].self, from: data) {
                     DispatchQueue.main.async {
                         users = decodedResponse
-                        for friend in self.user.friends {
+                        /*for friend in self.user.friends {
                             if let position = users.firstIndex(where: { $0.id == friend.id }) {
                                 let userSelected = users[position]
                                 self.friends.append(userSelected)
                             }
-                        }
+                        }*/
                     }
                     
                     
@@ -101,7 +107,7 @@ struct UserView: View {
 }
 
 struct UserView_Previews: PreviewProvider {
-    static let user = User(id: "50a48fa3-2c0f-4397-ac50-64da464f9954", isActive: true, name: "Alford Rodriguez", age: 21, company: "Imkan", email: "alfordrodriguez@imkan.com", address: "907 Nelson Street, Cotopaxi, South Dakota, 5913", about: "Occaecat consequat elit aliquip magna laboris dolore laboris sunt officia adipisicing reprehenderit sunt. Do in proident consectetur labore. Laboris pariatur quis incididunt nostrud labore ad cillum veniam ipsum ullamco. Dolore laborum commodo veniam nisi. Eu ullamco cillum ex nostrud fugiat eu consequat enim cupidatat. Non incididunt fugiat cupidatat reprehenderit nostrud eiusmod eu sit minim do amet qui cupidatat. Elit aliquip nisi ea veniam proident dolore exercitation irure est deserunt.\r\n", registered: "2015-11-10T01:47:18-00:00", tags: [
+    /*static let user = User(id: "50a48fa3-2c0f-4397-ac50-64da464f9954", isActive: true, name: "Alford Rodriguez", age: 21, company: "Imkan", email: "alfordrodriguez@imkan.com", address: "907 Nelson Street, Cotopaxi, South Dakota, 5913", about: "Occaecat consequat elit aliquip magna laboris dolore laboris sunt officia adipisicing reprehenderit sunt. Do in proident consectetur labore. Laboris pariatur quis incididunt nostrud labore ad cillum veniam ipsum ullamco. Dolore laborum commodo veniam nisi. Eu ullamco cillum ex nostrud fugiat eu consequat enim cupidatat. Non incididunt fugiat cupidatat reprehenderit nostrud eiusmod eu sit minim do amet qui cupidatat. Elit aliquip nisi ea veniam proident dolore exercitation irure est deserunt.\r\n", registered: "2015-11-10T01:47:18-00:00", tags: [
         "cillum",
         "consequat",
         "deserunt",
@@ -118,7 +124,8 @@ struct UserView_Previews: PreviewProvider {
             id: "0c395a95-57e2-4d53-b4f6-9b9e46a32cf6",
             name: "Jewel Sexton"
         )
-    ])
+    ])*/
+    static let user = User()
     static var previews: some View {
         UserView(user: user)
     }

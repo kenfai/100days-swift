@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-struct Response: Codable {
-    var users: [User]
-}
-
-struct User: Codable {
+/*struct User: Codable {
     var id: String
     var isActive: Bool
     var name: String
@@ -28,7 +24,7 @@ struct User: Codable {
 struct Friend: Codable {
     var id: String
     var name: String
-}
+}*/
 
 struct ContentView: View {
     @State private var users = [User]()
@@ -40,7 +36,7 @@ struct ContentView: View {
                     NavigationLink(destination: UserView(user: user)) {
                         HStack {
                             VStack(alignment: .leading) {
-                                Text("\(user.name)")
+                                Text("\(user.wrappedName)")
                                     .font(.headline)
                                 Text("Age: \(user.age)")
                             }
