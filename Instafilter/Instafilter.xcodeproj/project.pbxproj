@@ -16,6 +16,9 @@
 		52AD6821251CEA62002C06EC /* InstafilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6820251CEA62002C06EC /* InstafilterTests.swift */; };
 		52AD682C251CEA62002C06EC /* InstafilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD682B251CEA62002C06EC /* InstafilterUITests.swift */; };
 		52AD683D251CF1E7002C06EC /* CustomBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD683C251CF1E7002C06EC /* CustomBindingView.swift */; };
+		52D31CD5251E229900A8A3F6 /* ActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D31CD4251E229800A8A3F6 /* ActionSheetView.swift */; };
+		52D31CDA251E283700A8A3F6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D31CD9251E283700A8A3F6 /* ImagePicker.swift */; };
+		52D31CDF251E291800A8A3F6 /* ImageFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D31CDE251E291800A8A3F6 /* ImageFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		52AD682B251CEA62002C06EC /* InstafilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterUITests.swift; sourceTree = "<group>"; };
 		52AD682D251CEA62002C06EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52AD683C251CF1E7002C06EC /* CustomBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBindingView.swift; sourceTree = "<group>"; };
+		52D31CD4251E229800A8A3F6 /* ActionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetView.swift; sourceTree = "<group>"; };
+		52D31CD9251E283700A8A3F6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		52D31CDE251E291800A8A3F6 /* ImageFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,9 @@
 				52AD6809251CEA60002C06EC /* AppDelegate.swift */,
 				52AD680B251CEA60002C06EC /* SceneDelegate.swift */,
 				52AD680D251CEA60002C06EC /* ContentView.swift */,
+				52D31CDE251E291800A8A3F6 /* ImageFilterView.swift */,
+				52D31CD9251E283700A8A3F6 /* ImagePicker.swift */,
+				52D31CD4251E229800A8A3F6 /* ActionSheetView.swift */,
 				52AD683C251CF1E7002C06EC /* CustomBindingView.swift */,
 				52AD680F251CEA61002C06EC /* Assets.xcassets */,
 				52AD6814251CEA61002C06EC /* LaunchScreen.storyboard */,
@@ -271,8 +280,11 @@
 			files = (
 				52AD680A251CEA60002C06EC /* AppDelegate.swift in Sources */,
 				52AD680C251CEA60002C06EC /* SceneDelegate.swift in Sources */,
+				52D31CDF251E291800A8A3F6 /* ImageFilterView.swift in Sources */,
 				52AD680E251CEA60002C06EC /* ContentView.swift in Sources */,
+				52D31CDA251E283700A8A3F6 /* ImagePicker.swift in Sources */,
 				52AD683D251CF1E7002C06EC /* CustomBindingView.swift in Sources */,
+				52D31CD5251E229900A8A3F6 /* ActionSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
