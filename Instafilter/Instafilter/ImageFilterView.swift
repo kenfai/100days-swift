@@ -39,15 +39,15 @@ struct ImageFilterView: View {
         currentFilter.scale = 100*/
         
         // Apply crystalize effect
-        /*let currentFilter = CIFilter.crystallize()
+        let currentFilter = CIFilter.crystallize()
         currentFilter.inputImage = beginImage
-        currentFilter.radius = 200*/
+        currentFilter.radius = 200
         
         // Apply Twirl Distortion
-        let currentFilter = CIFilter.twirlDistortion()
+        /*let currentFilter = CIFilter.twirlDistortion()
         currentFilter.inputImage = beginImage
         currentFilter.radius = 2000
-        currentFilter.center = CGPoint(x: inputImage.size.width / 2, y: inputImage.size.height / 2)
+        currentFilter.center = CGPoint(x: inputImage.size.width / 2, y: inputImage.size.height / 2)*/
         
         // get a CIImage from our filter or exit if that fails
         guard let outputImage = currentFilter.outputImage else { return }
