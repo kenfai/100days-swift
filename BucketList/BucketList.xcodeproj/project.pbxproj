@@ -16,6 +16,8 @@
 		5207AFD62520C38B0058C666 /* BucketListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207AFD52520C38B0058C666 /* BucketListTests.swift */; };
 		5207AFE12520C38B0058C666 /* BucketListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207AFE02520C38B0058C666 /* BucketListUITests.swift */; };
 		5207AFF22520C9D50058C666 /* FileManager-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207AFF12520C9D50058C666 /* FileManager-Decodable.swift */; };
+		52CB21D225220B1500518A71 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB21D125220B1500518A71 /* MapView.swift */; };
+		52CB21D7252216D900518A71 /* TechniqueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB21D6252216D900518A71 /* TechniqueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		5207AFE02520C38B0058C666 /* BucketListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListUITests.swift; sourceTree = "<group>"; };
 		5207AFE22520C38B0058C666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5207AFF12520C9D50058C666 /* FileManager-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-Decodable.swift"; sourceTree = "<group>"; };
+		52CB21D125220B1500518A71 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		52CB21D6252216D900518A71 /* TechniqueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,9 @@
 			children = (
 				5207AFBE2520C3890058C666 /* AppDelegate.swift */,
 				5207AFC02520C38A0058C666 /* SceneDelegate.swift */,
+				52CB21D125220B1500518A71 /* MapView.swift */,
 				5207AFC22520C38A0058C666 /* ContentView.swift */,
+				52CB21D6252216D900518A71 /* TechniqueView.swift */,
 				5207AFF12520C9D50058C666 /* FileManager-Decodable.swift */,
 				5207AFC42520C38B0058C666 /* Assets.xcassets */,
 				5207AFC92520C38B0058C666 /* LaunchScreen.storyboard */,
@@ -271,8 +277,10 @@
 			files = (
 				5207AFBF2520C3890058C666 /* AppDelegate.swift in Sources */,
 				5207AFC12520C38A0058C666 /* SceneDelegate.swift in Sources */,
+				52CB21D225220B1500518A71 /* MapView.swift in Sources */,
 				5207AFC32520C38A0058C666 /* ContentView.swift in Sources */,
 				5207AFF22520C9D50058C666 /* FileManager-Decodable.swift in Sources */,
+				52CB21D7252216D900518A71 /* TechniqueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
