@@ -16,6 +16,9 @@
 		5207AFD62520C38B0058C666 /* BucketListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207AFD52520C38B0058C666 /* BucketListTests.swift */; };
 		5207AFE12520C38B0058C666 /* BucketListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207AFE02520C38B0058C666 /* BucketListUITests.swift */; };
 		5207AFF22520C9D50058C666 /* FileManager-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207AFF12520C9D50058C666 /* FileManager-Decodable.swift */; };
+		5221F82225238A7F00321126 /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221F82125238A7F00321126 /* MKPointAnnotation-ObservableObject.swift */; };
+		5221F82725238B1700321126 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221F82625238B1700321126 /* EditView.swift */; };
+		5221F82C25238D1E00321126 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221F82B25238D1E00321126 /* Result.swift */; };
 		52CB21D225220B1500518A71 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB21D125220B1500518A71 /* MapView.swift */; };
 		52CB21D7252216D900518A71 /* TechniqueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB21D6252216D900518A71 /* TechniqueView.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +56,9 @@
 		5207AFE02520C38B0058C666 /* BucketListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListUITests.swift; sourceTree = "<group>"; };
 		5207AFE22520C38B0058C666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5207AFF12520C9D50058C666 /* FileManager-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-Decodable.swift"; sourceTree = "<group>"; };
+		5221F82125238A7F00321126 /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
+		5221F82625238B1700321126 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		5221F82B25238D1E00321126 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		52CB21D125220B1500518A71 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		52CB21D6252216D900518A71 /* TechniqueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +114,9 @@
 				5207AFBE2520C3890058C666 /* AppDelegate.swift */,
 				5207AFC02520C38A0058C666 /* SceneDelegate.swift */,
 				52CB21D125220B1500518A71 /* MapView.swift */,
+				5221F82125238A7F00321126 /* MKPointAnnotation-ObservableObject.swift */,
+				5221F82B25238D1E00321126 /* Result.swift */,
+				5221F82625238B1700321126 /* EditView.swift */,
 				5207AFC22520C38A0058C666 /* ContentView.swift */,
 				52CB21D6252216D900518A71 /* TechniqueView.swift */,
 				5207AFF12520C9D50058C666 /* FileManager-Decodable.swift */,
@@ -275,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5221F82C25238D1E00321126 /* Result.swift in Sources */,
 				5207AFBF2520C3890058C666 /* AppDelegate.swift in Sources */,
 				5207AFC12520C38A0058C666 /* SceneDelegate.swift in Sources */,
+				5221F82725238B1700321126 /* EditView.swift in Sources */,
+				5221F82225238A7F00321126 /* MKPointAnnotation-ObservableObject.swift in Sources */,
 				52CB21D225220B1500518A71 /* MapView.swift in Sources */,
 				5207AFC32520C38A0058C666 /* ContentView.swift in Sources */,
 				5207AFF22520C9D50058C666 /* FileManager-Decodable.swift in Sources */,
