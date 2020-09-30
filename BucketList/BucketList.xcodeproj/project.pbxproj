@@ -19,6 +19,7 @@
 		5221F82225238A7F00321126 /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221F82125238A7F00321126 /* MKPointAnnotation-ObservableObject.swift */; };
 		5221F82725238B1700321126 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221F82625238B1700321126 /* EditView.swift */; };
 		5221F82C25238D1E00321126 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221F82B25238D1E00321126 /* Result.swift */; };
+		526FD0AE2524B722005E9381 /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FD0AD2524B722005E9381 /* MKPointAnnotation-Codable.swift */; };
 		52CB21D225220B1500518A71 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB21D125220B1500518A71 /* MapView.swift */; };
 		52CB21D7252216D900518A71 /* TechniqueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB21D6252216D900518A71 /* TechniqueView.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		5221F82125238A7F00321126 /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
 		5221F82625238B1700321126 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		5221F82B25238D1E00321126 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		526FD0AD2524B722005E9381 /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
 		52CB21D125220B1500518A71 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		52CB21D6252216D900518A71 /* TechniqueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 				5221F82125238A7F00321126 /* MKPointAnnotation-ObservableObject.swift */,
 				5221F82B25238D1E00321126 /* Result.swift */,
 				5221F82625238B1700321126 /* EditView.swift */,
+				526FD0AD2524B722005E9381 /* MKPointAnnotation-Codable.swift */,
 				5207AFC22520C38A0058C666 /* ContentView.swift */,
 				52CB21D6252216D900518A71 /* TechniqueView.swift */,
 				5207AFF12520C9D50058C666 /* FileManager-Decodable.swift */,
@@ -290,6 +293,7 @@
 				5221F82725238B1700321126 /* EditView.swift in Sources */,
 				5221F82225238A7F00321126 /* MKPointAnnotation-ObservableObject.swift in Sources */,
 				52CB21D225220B1500518A71 /* MapView.swift in Sources */,
+				526FD0AE2524B722005E9381 /* MKPointAnnotation-Codable.swift in Sources */,
 				5207AFC32520C38A0058C666 /* ContentView.swift in Sources */,
 				5207AFF22520C9D50058C666 /* FileManager-Decodable.swift in Sources */,
 				52CB21D7252216D900518A71 /* TechniqueView.swift in Sources */,
