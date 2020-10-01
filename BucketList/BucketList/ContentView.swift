@@ -14,44 +14,28 @@ struct ContentView: View {
     @State private var locations = [CodableMKPointAnnotation]()
     @State private var selectedPlace: MKPointAnnotation?
     @State private var showingPlaceDetails = false
-    
     @State private var showingEditScreen = false
+
     @State private var isUnlocked = false
+    
+    @State private var activeAlertType: AlertType = .placeDetails
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    
+    enum AlertType {
+        case placeDetails
+        case error
+    }
 
     var body: some View {
         ZStack {
             if isUnlocked {
-                MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, annotations: locations)
-                    .edgesIgnoringSafeArea(.all)
-                Circle()
-                    .fill(Color.blue)
-                    .opacity(0.3)
-                    .frame(width: 32, height: 32)
-                
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            // creates a new location
-                            let newLocation = CodableMKPointAnnotation()
-                            newLocation.coordinate = self.centerCoordinate
-                            newLocation.title = "Example location"
-                            self.locations.append(newLocation)
-                            
-                            self.selectedPlace = newLocation
-                            self.showingEditScreen = true
-                        }) {
-                            Image(systemName: "plus")
-                        }
-                        .padding()
-                        .background(Color.black.opacity(0.75))
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .clipShape(Circle())
-                        .padding(.trailing)
-                    }
-                }
+                FullMapView(centerCoordinate: $centerCoordinate,
+                            locations: $locations,
+                            selectedPlace: $selectedPlace,
+                            showingPlaceDetails: $showingPlaceDetails,
+                            showingEditScreen: $showingEditScreen)
+                    .onAppear(perform: loadData)
             } else {
                 // button here
                 Button("Unlock Places") {
@@ -64,19 +48,23 @@ struct ContentView: View {
             }
         }
         .alert(isPresented: $showingPlaceDetails) {
-            Alert(title: Text(selectedPlace?.title ?? "Unknown"), message: Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: .default(Text("OK")), secondaryButton: .default(Text("Edit")) {
-                // edit this place
-                self.showingEditScreen = true
-            })
+            switch activeAlertType {
+            case .placeDetails:
+                return Alert(title: Text(selectedPlace?.title ?? "Unknown"), message: Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: .default(Text("OK")), secondaryButton: .default(Text("Edit")) {
+                    // edit this place
+                    self.showingEditScreen = true
+                })
+            case .error:
+                return Alert(title: Text(alertTitle), message: Text(alertMessage))
+            }
         }
         .sheet(isPresented: $showingEditScreen, onDismiss: saveData) {
             if self.selectedPlace != nil {
                 EditView(placemark: self.selectedPlace!)
             }
         }
-        .onAppear(perform: loadData)
     }
-    
+
     func getDocumentDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
@@ -117,11 +105,18 @@ struct ContentView: View {
                         self.isUnlocked = true
                     } else {
                         // error
+                        self.activeAlertType = .error
+                        self.alertTitle = "Authentication Error"
+                        self.alertMessage = authenticationError?.localizedDescription ?? "Unknown Error"
+                        self.showingPlaceDetails = true
                     }
                 }
             }
         } else {
-            // no biometrics
+            self.activeAlertType = .error
+            self.alertTitle = "Authentication Error"
+            self.alertMessage = "Your devices does not support Face ID or Touch ID."
+            self.showingPlaceDetails = true
         }
     }
 }
