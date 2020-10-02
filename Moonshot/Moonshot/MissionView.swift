@@ -29,11 +29,16 @@ struct MissionView: View {
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.7)
                         .padding()
+                        .accessibility(label: Text("Mission Badge of Apollo \(self.mission.id)"))
                     
-                    Text("Launch Date:")
-                        .font(.caption)
-                    Text(self.mission.formattedLaunchDate)
-                        .font(.headline)
+                    VStack {
+                        Text("Launch Date:")
+                            .font(.caption)
+                        Text(self.mission.formattedLaunchDate)
+                            .font(.headline)
+                    }
+                    .accessibilityElement(children: .combine)
+                    .accessibility(label: Text("Launch Date: \(self.mission.formattedLaunchDate)"))
                     
                     Text(self.mission.description)
                         .padding()

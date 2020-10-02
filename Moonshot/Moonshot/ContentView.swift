@@ -25,6 +25,7 @@ struct ContentView: View {
                         //.aspectRatio(contentMode: .fit)
                         .scaledToFit()
                         .frame(width: 44, height: 44)
+                        .accessibility(label: Text("Mission Badge of Apollo \(mission.id)"))
                     
                     VStack(alignment: .leading) {
                         Text(mission.displayName)
