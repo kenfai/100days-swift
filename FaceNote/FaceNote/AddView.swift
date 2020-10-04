@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct AddView: View {
     @ObservedObject var faces: Faces
@@ -14,6 +15,8 @@ struct AddView: View {
     @State private var showingImagePicker = false;
     @State private var name = ""
     @State private var image: Image?
+    
+    let locationFetcher = LocationFetcher()
     
     var body: some View {
         NavigationView {
@@ -52,6 +55,7 @@ struct AddView: View {
             }) {
                 ImagePicker(image: self.$inputImage)
             }
+            .onAppear(perform: self.locationFetcher.start)
         }
     }
     
@@ -71,7 +75,9 @@ struct AddView: View {
             try? jpegData.write(to: url, options: [.atomicWrite, .completeFileProtection])
         }
         
-        let face = Face(photo: self.name, name: self.name)
+        let location = self.locationFetcher.lastKnownLocation
+        
+        let face = Face(photo: self.name, name: self.name, latitude: location?.latitude, longitude: location?.longitude)
         self.faces.addFace(face: face)
         
         presentationMode.wrappedValue.dismiss()

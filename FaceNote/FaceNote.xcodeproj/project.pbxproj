@@ -18,6 +18,9 @@
 		5262C8612528B4ED002A6321 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5262C8602528B4ED002A6321 /* ImagePicker.swift */; };
 		5262C8642528C15D002A6321 /* Faces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5262C8632528C15D002A6321 /* Faces.swift */; };
 		5262C8672528CDED002A6321 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5262C8662528CDED002A6321 /* FaceView.swift */; };
+		52C2E0712529FF1900565013 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2E0702529FF1900565013 /* LocationFetcher.swift */; };
+		52C2E074252A014A00565013 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2E073252A014A00565013 /* MapView.swift */; };
+		52C2E077252A075D00565013 /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2E076252A075D00565013 /* MKPointAnnotation-Codable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		5262C8602528B4ED002A6321 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5262C8632528C15D002A6321 /* Faces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faces.swift; sourceTree = "<group>"; };
 		5262C8662528CDED002A6321 /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		52C2E0702529FF1900565013 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		52C2E073252A014A00565013 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		52C2E076252A075D00565013 /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,10 @@
 				5262C8592528A957002A6321 /* Face.swift */,
 				5262C8632528C15D002A6321 /* Faces.swift */,
 				5262C8482528A740002A6321 /* ContentView.swift */,
+				52C2E073252A014A00565013 /* MapView.swift */,
 				5262C8662528CDED002A6321 /* FaceView.swift */,
+				52C2E076252A075D00565013 /* MKPointAnnotation-Codable.swift */,
+				52C2E0702529FF1900565013 /* LocationFetcher.swift */,
 				5262C85D2528B33E002A6321 /* AddView.swift */,
 				5262C8602528B4ED002A6321 /* ImagePicker.swift */,
 				5262C84A2528A741002A6321 /* Assets.xcassets */,
@@ -162,12 +171,15 @@
 			files = (
 				5262C85A2528A957002A6321 /* Face.swift in Sources */,
 				5262C8642528C15D002A6321 /* Faces.swift in Sources */,
+				52C2E077252A075D00565013 /* MKPointAnnotation-Codable.swift in Sources */,
 				5262C8452528A740002A6321 /* AppDelegate.swift in Sources */,
 				5262C8672528CDED002A6321 /* FaceView.swift in Sources */,
 				5262C85E2528B33E002A6321 /* AddView.swift in Sources */,
 				5262C8612528B4ED002A6321 /* ImagePicker.swift in Sources */,
 				5262C8472528A740002A6321 /* SceneDelegate.swift in Sources */,
+				52C2E074252A014A00565013 /* MapView.swift in Sources */,
 				5262C8492528A740002A6321 /* ContentView.swift in Sources */,
+				52C2E0712529FF1900565013 /* LocationFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

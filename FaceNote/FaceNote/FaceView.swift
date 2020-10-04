@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct FaceView: View {
     var face: Face
     @State private var image: Image?
+    
+    @State private var centerCoordinate = CLLocationCoordinate2D()
+    @State private var selectedPlace: MKPointAnnotation?
+    @State private var locations = [MKPointAnnotation]()
     
     var body: some View {
         VStack {
@@ -18,6 +23,8 @@ struct FaceView: View {
                 .scaledToFit()
             
             Text(self.face.name)
+            
+            MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, annotations: self.locations)
         }
         .onAppear(perform: loadImage)
     }
@@ -41,6 +48,14 @@ struct FaceView: View {
         } catch {
             print("Cannot load image")
         }
+        
+        self.centerCoordinate = CLLocationCoordinate2D(latitude: (self.face.latitude ?? 0.0), longitude: (self.face.longitude ?? 0.0))
+        
+        let newLocation = MKPointAnnotation()
+        newLocation.coordinate = CLLocationCoordinate2D(latitude: (self.face.latitude ?? 0.0), longitude: (self.face.longitude ?? 0.0))
+        self.locations.append(newLocation)
+        self.selectedPlace = newLocation
+        
     }
 }
 /*
