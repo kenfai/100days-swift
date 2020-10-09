@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52A710FE253089B600678B7B /* TechnicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A710FD253089B600678B7B /* TechnicView.swift */; };
+		52A7110125308AB600678B7B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7110025308AB600678B7B /* Card.swift */; };
+		52A7110525308EB000678B7B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7110425308EB000678B7B /* CardView.swift */; };
+		52A711092530ACE500678B7B /* EditCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A711082530ACE500678B7B /* EditCards.swift */; };
 		52C653CF252F2E2E00CF55BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C653CE252F2E2E00CF55BB /* AppDelegate.swift */; };
 		52C653D1252F2E2E00CF55BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C653D0252F2E2E00CF55BB /* SceneDelegate.swift */; };
 		52C653D3252F2E2E00CF55BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C653D2252F2E2E00CF55BB /* ContentView.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52A710FD253089B600678B7B /* TechnicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicView.swift; sourceTree = "<group>"; };
+		52A7110025308AB600678B7B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		52A7110425308EB000678B7B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		52A711082530ACE500678B7B /* EditCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCards.swift; sourceTree = "<group>"; };
 		52C653CB252F2E2E00CF55BB /* Flashzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C653CE252F2E2E00CF55BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52C653D0252F2E2E00CF55BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,10 @@
 				52C653CE252F2E2E00CF55BB /* AppDelegate.swift */,
 				52C653D0252F2E2E00CF55BB /* SceneDelegate.swift */,
 				52C653D2252F2E2E00CF55BB /* ContentView.swift */,
+				52A7110425308EB000678B7B /* CardView.swift */,
+				52A7110025308AB600678B7B /* Card.swift */,
+				52A711082530ACE500678B7B /* EditCards.swift */,
+				52A710FD253089B600678B7B /* TechnicView.swift */,
 				52C653D4252F2E2F00CF55BB /* Assets.xcassets */,
 				52C653D9252F2E2F00CF55BB /* LaunchScreen.storyboard */,
 				52C653DC252F2E2F00CF55BB /* Info.plist */,
@@ -146,7 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C653CF252F2E2E00CF55BB /* AppDelegate.swift in Sources */,
+				52A710FE253089B600678B7B /* TechnicView.swift in Sources */,
+				52A7110125308AB600678B7B /* Card.swift in Sources */,
+				52A711092530ACE500678B7B /* EditCards.swift in Sources */,
 				52C653D1252F2E2E00CF55BB /* SceneDelegate.swift in Sources */,
+				52A7110525308EB000678B7B /* CardView.swift in Sources */,
 				52C653D3252F2E2E00CF55BB /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
