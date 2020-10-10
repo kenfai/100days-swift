@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct CardView: View {
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     @Environment(\.accessibilityEnabled) var accessibilityEnabled
     
     let card: Card
-    var removal: (() -> Void)? = nil
+    @Binding var retryWrongAnswers: Bool
+    var removal: ((_ answer: Bool) -> Void)? = nil
     
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
@@ -31,23 +33,24 @@ struct CardView: View {
                     differentiateWithoutColor
                         ? nil
                         : RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(offset.width > 0 ? Color.green : Color.red)
+                            //.fill(offset.width > 0 ? Color.green : Color.red)
+                            .fill(offset.width == 0 ? Color.white : (offset.width > 0 ? Color.green : Color.red))
                 )
                 .shadow(radius: 10)
             
             VStack {
                 if accessibilityEnabled {
                     Text(isShowingAnswer ? card.answer : card.prompt)
-                        .font(.largeTitle)
+                        .font(.title)
                         .foregroundColor(.black)
                 } else {
                     Text(card.prompt)
-                        .font(.largeTitle)
+                        .font(.title)
                         .foregroundColor(.black)
                     
                     if isShowingAnswer {
                         Text(card.answer)
-                            .font(.title)
+                            .font(.headline)
                             .foregroundColor(.gray)
                     }
                 }
@@ -55,7 +58,7 @@ struct CardView: View {
             .padding(20)
             .multilineTextAlignment(.center)
         }
-        .frame(width: 450, height: 250)
+        .frame(width: 450, height: 150)
         .rotationEffect(.degrees(Double(offset.width / 5)))
         .offset(x: offset.width * 5, y: 0)
         .opacity(2 - Double(abs(offset.width / 50)))
@@ -69,14 +72,20 @@ struct CardView: View {
             
                 .onEnded { _ in
                     if abs(self.offset.width) > 100 {
+                        let answer: Bool
                         if self.offset.width > 0 {
+                            answer = true
                             self.feedback.notificationOccurred(.success)
                         } else {
+                            answer = false
+                            if (self.retryWrongAnswers) {
+                                self.offset = .zero
+                            }
+                            self.isShowingAnswer = false
                             self.feedback.notificationOccurred(.error)
                         }
-                        
                         // remove the card
-                        self.removal?()
+                        self.removal?(answer)
                     } else {
                         self.offset = .zero
                     }
@@ -91,6 +100,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: Card.example)
+        CardView(card: Card.example, retryWrongAnswers: .constant(false))
     }
 }

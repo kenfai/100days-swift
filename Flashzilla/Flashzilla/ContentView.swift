@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 extension View {
     func stacked(at position: Int, in total: Int) -> some View {
@@ -20,36 +21,54 @@ struct ContentView: View {
     
     //@State private var cards = [Card](repeating: Card.example, count: 10)
     @State private var cards = [Card]()
-    @State private var timeRemaining = 100
+    @State private var timeRemaining = 7
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State private var isActive = true
     @State private var showingEditScreen = false
+    @State private var showingGameOver = false
+    @State private var feedback = UINotificationFeedbackGenerator()
+    @State private var showingSettingsScreen = false
+    
+    @State private var retryWrongAnswers = false
     
     var body: some View {
         ZStack {
             Image(decorative: "background")
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Text("Time: \(timeRemaining)")
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 5)
-                    .background(
-                        Capsule()
-                            .fill(Color.black)
-                            .opacity(0.75)
-                    )
+                if showingGameOver {
+                    Text("Times Up!")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 5)
+                        .background(
+                            Capsule()
+                                .fill(Color.red)
+                                .opacity(0.9)
+                        )
+                } else {
+                    Text("Time: \(timeRemaining)")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 5)
+                        .background(
+                            Capsule()
+                                .fill(Color.black)
+                                .opacity(0.75)
+                        )
+                }
                 
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { index in
-                        CardView(card: self.cards[index]) {
+                        CardView(card: self.cards[index], retryWrongAnswers: self.$retryWrongAnswers) { answer in
                             withAnimation {
-                                self.removeCard(at: index)
+                                self.removeCard(at: index, answer: answer)
                             }
                         }
                         .stacked(at: index, in: self.cards.count)
@@ -70,6 +89,15 @@ struct ContentView: View {
             
             VStack {
                 HStack {
+                    Button(action: {
+                        self.showingSettingsScreen = true
+                    }) {
+                        Image(systemName: "gear")
+                            .padding()
+                            .background(Color.black.opacity(0.7))
+                            .clipShape(Circle())
+                    }
+
                     Spacer()
                     
                     Button(action: {
@@ -83,6 +111,19 @@ struct ContentView: View {
                 }
                 
                 Spacer()
+                
+                HStack {
+                    Button(action: {
+                        self.cards.insert(Card.example, at: 0)
+                    }) {
+                        Text("Insert example card")
+                    }
+                    
+                    Spacer()
+                    
+                    Text("Stack count: \(self.cards.count)")
+                        .foregroundColor(Color.black)
+                }
             }
             .foregroundColor(.white)
             .font(.largeTitle)
@@ -95,7 +136,7 @@ struct ContentView: View {
                     HStack {
                         Button(action: {
                             withAnimation {
-                                self.removeCard(at: self.cards.count - 1)
+                                self.removeCard(at: self.cards.count - 1, answer: false)
                             }
                         }) {
                             Image(systemName: "xmark.circle")
@@ -110,7 +151,7 @@ struct ContentView: View {
                         
                         Button(action: {
                             withAnimation {
-                                self.removeCard(at: self.cards.count - 1)
+                                self.removeCard(at: self.cards.count - 1, answer: true)
                             }
                         }) {
                             Image(systemName: "checkmark.circle")
@@ -133,6 +174,15 @@ struct ContentView: View {
             if self.timeRemaining > 0 {
                 self.timeRemaining -= 1
             }
+            
+            if self.timeRemaining == 1 {
+                self.feedback.prepare()
+            }
+            
+            if self.timeRemaining == 0 {
+                self.showingGameOver = true
+                self.feedback.notificationOccurred(.error)
+            }
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
             self.isActive = false
@@ -145,6 +195,14 @@ struct ContentView: View {
         .sheet(isPresented: $showingEditScreen, onDismiss: resetCards) {
             EditCards()
         }
+        .actionSheet(isPresented: $showingSettingsScreen) {
+            ActionSheet(title: Text("Settings"), message: Text("Configure Options"), buttons: [
+                            .default(Text("Retry Wrong Answers: \(self.retryWrongAnswers ? "On" : "Off")")) {
+                                self.retryWrongAnswers.toggle()
+                            },
+                            .cancel()
+            ])
+        }
         .onAppear(perform: resetCards)
     }
     
@@ -156,9 +214,14 @@ struct ContentView: View {
         }
     }
     
-    func removeCard(at index: Int) {
+    func removeCard(at index: Int, answer: Bool) {
         guard index >= 0 else { return }
-        cards.remove(at: index)
+        
+        if self.retryWrongAnswers && !answer {
+            cards.move(fromOffsets: [index], toOffset: 0)
+        } else {
+            cards.remove(at: index)
+        }
         
         if cards.isEmpty {
             isActive = false
