@@ -24,12 +24,23 @@ struct MissionView: View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
                 VStack {
-                    Image(self.mission.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: geometry.size.width * 0.7)
-                        .padding()
-                        .accessibility(label: Text("Mission Badge of Apollo \(self.mission.id)"))
+                    GeometryReader { geo in
+                        Image(self.mission.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: geometry.size.width)
+                            .padding(.top, min(10 + geometry.frame(in: .global).minY - geo.frame(in: .global).minY, geo.frame(in: .local).maxY * 0.2))
+                            .padding(.bottom, 10)
+                            .accessibility(label: Text("Mission Badge of Apollo \(self.mission.id)"))
+                        
+                        /*Text("geometry global minY \(geometry.frame(in: .global).minY)")
+                            .position(x: 50, y: 400)
+                            .foregroundColor(Color.red)
+                        Text("geo global minY \(geo.frame(in: .global).minY)")
+                            .position(x: 50, y: 450)
+                            .foregroundColor(Color.red)*/
+                    }
+                    //.background(Color.blue)
                     
                     VStack {
                         Text("Launch Date:")
