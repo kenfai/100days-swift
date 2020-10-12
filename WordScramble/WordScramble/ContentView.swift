@@ -28,13 +28,23 @@ struct ContentView: View {
                     .autocapitalization(.none)
                     .padding()
                 
-                List(usedWords, id: \.self) { word in
-                    HStack {
-                        Image(systemName: "\(word.count).circle")
-                        Text(word)
+                GeometryReader { geometry in
+                    //Text("global height: \(geometry.frame(in: .global).height) minY: \(geometry.frame(in: .global).minY)")
+                    //    .position(x: 150, y: -80)
+                    
+                    List(usedWords, id: \.self) { word in
+                        GeometryReader { geo in
+                            HStack {
+                                Image(systemName: "\(word.count).circle")
+                                    .foregroundColor(Color(red: Double(geo.frame(in: .global).maxY / (geometry.frame(in: .global).height + geometry.frame(in: .global).minY)), green: 0.2, blue: 0.7))
+                                //Text("\(geo.frame(in: .global).maxY)")
+                                Text(word)
+                            }
+                            .offset(x: max(0, (geo.frame(in: .global).maxY - geometry.frame(in: .global).height) * 1.5), y: 0)
+                            .accessibilityElement(children: .ignore)
+                            .accessibility(label: Text("\(word), \(word.count) letters"))
+                        }
                     }
-                    .accessibilityElement(children: .ignore)
-                    .accessibility(label: Text("\(word), \(word.count) letters"))
                 }
                 
                 Text("Score: \(score)")
