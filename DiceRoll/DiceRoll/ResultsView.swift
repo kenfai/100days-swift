@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ResultsView: View {
-    @EnvironmentObject var results: Results
+    @FetchRequest(entity: Roll.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \Roll.created, ascending: false)
+    ]) var results: FetchedResults<Roll>
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(results.results) { result in
+                ForEach(results, id: \.self) { result in
                     HStack {
                         Text("\(result.result)")
                     }

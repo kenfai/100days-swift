@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var dice = Dice()
-    var results = Results()
     
     var body: some View {
         TabView {
@@ -32,7 +31,6 @@ struct ContentView: View {
                 }
         }
         .environmentObject(dice)
-        .environmentObject(results)
     }
 }
 

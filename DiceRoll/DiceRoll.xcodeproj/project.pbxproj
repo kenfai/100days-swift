@@ -16,7 +16,6 @@
 		520DD57A2534757400DC7B74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520DD5782534757400DC7B74 /* LaunchScreen.storyboard */; };
 		520DD5832534866000DC7B74 /* RollDiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DD5822534866000DC7B74 /* RollDiceView.swift */; };
 		520DD587253489FB00DC7B74 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DD586253489FB00DC7B74 /* ResultsView.swift */; };
-		520DD58A25348A6800DC7B74 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DD58925348A6800DC7B74 /* Results.swift */; };
 		520DD58D2534913A00DC7B74 /* CustomDiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DD58C2534913A00DC7B74 /* CustomDiceView.swift */; };
 		520DD5902534926700DC7B74 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DD58F2534926700DC7B74 /* Dice.swift */; };
 /* End PBXBuildFile section */
@@ -33,7 +32,6 @@
 		520DD57B2534757400DC7B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		520DD5822534866000DC7B74 /* RollDiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollDiceView.swift; sourceTree = "<group>"; };
 		520DD586253489FB00DC7B74 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
-		520DD58925348A6800DC7B74 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		520DD58C2534913A00DC7B74 /* CustomDiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDiceView.swift; sourceTree = "<group>"; };
 		520DD58F2534926700DC7B74 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +69,6 @@
 				520DD56A2534757400DC7B74 /* AppDelegate.swift */,
 				520DD56C2534757400DC7B74 /* SceneDelegate.swift */,
 				520DD58F2534926700DC7B74 /* Dice.swift */,
-				520DD58925348A6800DC7B74 /* Results.swift */,
 				520DD56E2534757400DC7B74 /* ContentView.swift */,
 				520DD58C2534913A00DC7B74 /* CustomDiceView.swift */,
 				520DD5822534866000DC7B74 /* RollDiceView.swift */,
@@ -168,7 +165,6 @@
 				520DD58D2534913A00DC7B74 /* CustomDiceView.swift in Sources */,
 				520DD56D2534757400DC7B74 /* SceneDelegate.swift in Sources */,
 				520DD5902534926700DC7B74 /* Dice.swift in Sources */,
-				520DD58A25348A6800DC7B74 /* Results.swift in Sources */,
 				520DD56F2534757400DC7B74 /* ContentView.swift in Sources */,
 				520DD5832534866000DC7B74 /* RollDiceView.swift in Sources */,
 				520DD5722534757400DC7B74 /* DiceRoll.xcdatamodeld in Sources */,
