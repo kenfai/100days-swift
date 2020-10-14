@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5255D5CA253711CB00691A53 /* TechnicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D5C9253711CB00691A53 /* TechnicView.swift */; };
+		5255D5CD2537121B00691A53 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5255D5CC2537121B00691A53 /* resorts.json */; };
+		5255D5D02537138600691A53 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D5CF2537138600691A53 /* Resort.swift */; };
+		5255D5D3253723CF00691A53 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D5D2253723CF00691A53 /* Bundle-Decodable.swift */; };
+		5255D5D725372C6100691A53 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D5D625372C6100691A53 /* ResortView.swift */; };
+		5255D5DA25372D6200691A53 /* SkiDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D5D925372D6200691A53 /* SkiDetailsView.swift */; };
+		5255D5DD25372E7000691A53 /* ResortDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D5DC25372E7000691A53 /* ResortDetailsView.swift */; };
+		5255D5E02537367A00691A53 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D5DF2537367A00691A53 /* Facility.swift */; };
+		5255D5E325373DB200691A53 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255D5E225373DB200691A53 /* Favourites.swift */; };
 		526C0D082535E53500427CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C0D072535E53500427CDC /* AppDelegate.swift */; };
 		526C0D0A2535E53500427CDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C0D092535E53500427CDC /* SceneDelegate.swift */; };
 		526C0D0C2535E53500427CDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C0D0B2535E53500427CDC /* ContentView.swift */; };
@@ -16,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5255D5C9253711CB00691A53 /* TechnicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicView.swift; sourceTree = "<group>"; };
+		5255D5CC2537121B00691A53 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
+		5255D5CF2537138600691A53 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
+		5255D5D2253723CF00691A53 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		5255D5D625372C6100691A53 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
+		5255D5D925372D6200691A53 /* SkiDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiDetailsView.swift; sourceTree = "<group>"; };
+		5255D5DC25372E7000691A53 /* ResortDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetailsView.swift; sourceTree = "<group>"; };
+		5255D5DF2537367A00691A53 /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		5255D5E225373DB200691A53 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 		526C0D042535E53500427CDC /* SnowSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		526C0D072535E53500427CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		526C0D092535E53500427CDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,10 +76,19 @@
 			children = (
 				526C0D072535E53500427CDC /* AppDelegate.swift */,
 				526C0D092535E53500427CDC /* SceneDelegate.swift */,
+				5255D5CF2537138600691A53 /* Resort.swift */,
+				5255D5E225373DB200691A53 /* Favourites.swift */,
+				5255D5D2253723CF00691A53 /* Bundle-Decodable.swift */,
 				526C0D0B2535E53500427CDC /* ContentView.swift */,
+				5255D5D925372D6200691A53 /* SkiDetailsView.swift */,
+				5255D5DC25372E7000691A53 /* ResortDetailsView.swift */,
+				5255D5D625372C6100691A53 /* ResortView.swift */,
+				5255D5DF2537367A00691A53 /* Facility.swift */,
+				5255D5C9253711CB00691A53 /* TechnicView.swift */,
 				526C0D0D2535E53600427CDC /* Assets.xcassets */,
 				526C0D122535E53600427CDC /* LaunchScreen.storyboard */,
 				526C0D152535E53600427CDC /* Info.plist */,
+				5255D5CC2537121B00691A53 /* resorts.json */,
 				526C0D0F2535E53600427CDC /* Preview Content */,
 			);
 			path = SnowSeeker;
@@ -134,6 +161,7 @@
 			files = (
 				526C0D142535E53600427CDC /* LaunchScreen.storyboard in Resources */,
 				526C0D112535E53600427CDC /* Preview Assets.xcassets in Resources */,
+				5255D5CD2537121B00691A53 /* resorts.json in Resources */,
 				526C0D0E2535E53600427CDC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,9 +173,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5255D5D02537138600691A53 /* Resort.swift in Sources */,
 				526C0D082535E53500427CDC /* AppDelegate.swift in Sources */,
+				5255D5E02537367A00691A53 /* Facility.swift in Sources */,
+				5255D5CA253711CB00691A53 /* TechnicView.swift in Sources */,
+				5255D5D725372C6100691A53 /* ResortView.swift in Sources */,
 				526C0D0A2535E53500427CDC /* SceneDelegate.swift in Sources */,
 				526C0D0C2535E53500427CDC /* ContentView.swift in Sources */,
+				5255D5E325373DB200691A53 /* Favourites.swift in Sources */,
+				5255D5DD25372E7000691A53 /* ResortDetailsView.swift in Sources */,
+				5255D5D3253723CF00691A53 /* Bundle-Decodable.swift in Sources */,
+				5255D5DA25372D6200691A53 /* SkiDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
