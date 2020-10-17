@@ -21,6 +21,13 @@ extension View {
     }
 }
 
+
+struct Welcome2View: View {
+    var body: some View {
+        nil
+    }
+}
+
 struct WelcomeView: View {
     var body: some View {
         VStack {
